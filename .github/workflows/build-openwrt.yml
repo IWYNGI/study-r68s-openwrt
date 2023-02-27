@@ -53,6 +53,14 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
+        apt-get install gnutls-bin
+        git config --global http.sslVerify false
+        git config --global http.sslVerify false
+        git config --global http.postBuffer 1048576000
+        git config --global http.proxy
+        git config --global --unset http.proxy
+        export GO111MODULE=on
+        export GOPROXY=https://goproxy.cn,direct
 
     - name: Clone source code
       working-directory: /workdir
