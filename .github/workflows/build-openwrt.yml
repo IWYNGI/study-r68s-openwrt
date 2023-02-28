@@ -54,7 +54,7 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
         export GO111MODULE=on
-        export GOPROXY=https://goproxy.cn,direct
+        export GOPROXY=https://goproxy.cn,direct export GOPROXY= https://goproxy.cn,direct
         git config --global http.sslverify false
         apt-get install
         sudo apt install -y ack antlr3 aria2 asciidoc autoconf automake autopoint binutils bison build-essential \
