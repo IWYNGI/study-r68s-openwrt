@@ -24,3 +24,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 
 #解决olsrd模块编译错误;
 rm -rf package/feeds/routing/olsrd/patches/012-gpsd.patch
+
+# 总是拉取官方golang版本，避免xray&v2ray编译错误
+pushd feeds/packages/lang
+rm -fr golang && svn co https://github.com/openwrt/packages/trunk/lang/golang
+popd
