@@ -21,3 +21,6 @@ find ./ -name luci-theme-argon | xargs rm -rf;
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 # 4替换默认主题为 luci-theme-argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
+
+#解决olsrd模块编译错误;
+rm -rf package/feeds/routing/olsrd/patches/012-gpsd.patch
