@@ -8,7 +8,8 @@ src-git Openclash https://github.com/vernesong/OpenClash
 src-git HelloWorld https://github.com/fw876/helloworld
 src-git oui https://github.com/zhaojh329/oui.git
 
-#src-git freifunk https://github.com/freifunk/openwrt-packages.git
+src-git freifunk https://github.com/freifunk/openwrt-packages.git
+
 #src-git small https://github.com/V2RaySSR/small
 #src-git targets https://github.com/openwrt/targets.git
 
