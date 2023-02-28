@@ -101,9 +101,10 @@ jobs:
     - name: Download package
       id: package
       run: |
+        exit
         cd openwrt
         make defconfig
-        make download -j8
+        make download -j12
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
